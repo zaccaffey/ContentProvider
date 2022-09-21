@@ -7,68 +7,100 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/etHome"
+        android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginBottom="87dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="70dp"
         android:ems="10"
-        android:hint="enter contact details"
+        android:hint="enter name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnFinish"
+    <EditText
+        android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="38dp"
-        android:text="finish"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etHome" />
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="53dp"
+        android:text="login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <Button
+        android:id="@+id/btnDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="6dp"
+        android:text="dial"
+        app:layout_constraintBottom_toBottomOf="@+id/btnHome"
+        app:layout_constraintStart_toEndOf="@+id/btnHome" />
 
     <TextView
-        android:id="@+id/tvHome"
+        android:id="@+id/tvContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="34dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/etHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHome" />
+
+    <Button
+        android:id="@+id/btnPut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="25dp"
+        android:text="put fs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContact" />
+
+    <Button
+        android:id="@+id/btnGet"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:text="get firestore"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnPut"
+        app:layout_constraintStart_toEndOf="@+id/btnPut" />
+
+    <Button
+        android:id="@+id/btnCommit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="27dp"
+        android:onClick="dbHandler"
+        android:text="commit"
+        app:layout_constraintBottom_toTopOf="@+id/btnRetreive"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/btnAlarm"
+        android:id="@+id/btnRetreive"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
-        android:text="alarm"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnFinish"
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="138dp"
+        android:onClick="dbHandler"
+        android:text="retreive"
+        app:layout_constraintBottom_toTopOf="@+id/tvContact"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ListView
-        android:id="@+id/cpListview"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etHome" />
-
-    <!-- <Button
-         android:id="@+id/button14"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginStart="22dp"
-         android:layout_marginTop="39dp"
-         android:onClick="insertContentprovider"
-         android:text="insert cp"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/btnFinish" />
- -->
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
